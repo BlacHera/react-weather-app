@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.small {
+  font-size: small-font-size;
+  font-weight: font-weight-normal;
+  text-align: left;
+}
