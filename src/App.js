@@ -8,12 +8,11 @@ function App() {
     <div className="App">
        <Weather temperature={26} />
      <small>
-    <a href="https://github.com/BlacHera/react-weather-app" target="_blank"
+    <a href="https://github.com/BlacHera/react-weather-app" target="_blank" rel="noreferrer"
     >Open-source code </a> 
     by Phyllis Ampo
       </small>
     </div>
   );
 }
-
 export default App;
