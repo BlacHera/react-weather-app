@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import WeatherDate from "./WeatherDate";
 import axios from "axios";
 import "./App.css";
 import "./Weather.css";
@@ -13,7 +14,7 @@ function displayWeather(response) {
       coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
-      date: "Monday 08:46",
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
       wind: response.data.wind.speed,
@@ -46,7 +47,9 @@ if (weatherData.ready){
     </form>
         <h1>{weatherData.city}</h1>
               <ul>
-                <li>{weatherData.date}</li>
+                <li>
+                  <WeatherDate date={weatherData.date}/>
+                  </li>
                 <li className="text-capitalize">{weatherData.description}</li>
               </ul>
           <div className="row mt-3">
