@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-       <Weather defualtCity="Barcelona" />
+       <Weather defaultCity="Barcelona" />
      <footer>
        This project was coded by Phyllis Ampo and is{" "} 
     <a href="https://github.com/BlacHera/react-weather-app" target="_blank" rel="noreferrer"
