@@ -8,9 +8,8 @@ import "./Weather.css";
 export default function Weather(props) {
 const[weatherData, setWeatherData] = useState({ready: false });
 const [city, setCity] = useState(props.defaultCity);
-function displayWeather(response) {
-  console.log(response.data);
 
+function displayWeather(response) {
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -34,7 +33,7 @@ function displayWeather(response) {
   }
 
   function search() {
-    const apiKey = "da8fa7d86bd7c295fd93964023335dd2";
+    const apiKey = "2473bfdc93b73e7b93449b389902e2a3";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeather);
   }
